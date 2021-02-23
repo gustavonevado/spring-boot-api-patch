@@ -3,12 +3,15 @@
 ## Spec
 Java 11
 Docker
-Feign
 Mongo
 
 ## Run
 
 ## Recursos
+
+http://localhost:7070/swagger-ui.html#/
+
+http://localhost:7070/swagger-ui.html#/movie-controller
 
 ### Patch Merge
 
@@ -20,11 +23,15 @@ curl -X PATCH "http://localhost:7070/movies/actions/json/O%20Senhor%20dos%20An%C
 
 ### add 
 [
-{ "op" : "add", "path": "/cast" , "value": ["Sam Gamgi 3","teste123"] },
-{ "op" : "add", "path": "/cast/0" , "value": "Frodo Baggins" },
-{ "op" : "add", "path": "/cast/1" , "value": "Elrond" },
-{ "op" : "add", "path": "/cast/2" , "value": "Galadriel" },
-{ "op" : "add", "path": "/cast" , "value": ["Sam Gamgi 3","teste123"] },
+    { "op" : "add", "path": "/cast" , "value": ["Sam Gamgi 3","teste123"] },
+    { "op" : "add", "path": "/cast/0" , "value": "Frodo Baggins" },
+    { "op" : "add", "path": "/cast/1" , "value": "Elrond" },
+    { "op" : "add", "path": "/cast/2" , "value": "Galadriel" }
+]
+
+### remove
+[
+    { "op" : "remove", "path": "/cast/2" }
 ]
 
 
@@ -32,9 +39,9 @@ curl -X PATCH "http://localhost:7070/movies/actions/json/O%20Senhor%20dos%20An%C
 [
 { "op" : "add", "path": "/cast/0" , "value": "Frodo Baggins" },
 { "op" : "add", "path": "/category/0" , "value": "Suspense" },
-{ "op" : "replace", "path": "/imdbScore" , "value": "0.5"}
+{ "op" : "replace", "path": "/imdbScore" , "value": "0.5"},
+{ "op" : "replace", "path": "/awards" , "value": ["Melhor Builders Talk do Ano"]}
 ]
-
 
 ### move
 

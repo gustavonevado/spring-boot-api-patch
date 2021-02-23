@@ -31,7 +31,6 @@ public class PatchUtils {
     public PatchUtils(Validator validator) {
         this.validator = validator;
         this.jsonMapper.registerModule(new JSR353Module());
-//        this.jsonMapper.registerModule(new GeoJsonModule()); //TODO remover
     }
 
     public <T> T mergePatch(JsonMergePatch mergePatch, T targetBean, Class<T> beanClass) {
