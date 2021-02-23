@@ -128,4 +128,6 @@ buildNumber.properties
 src/main/resources/application-local.yml
 src/main/resources/application-local.yaml
 .idea/*
+*.idea
+*.settings
 *.iml
